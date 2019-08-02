@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>May tinh</title>
+</head>
+<body>
+
+<h3>Day la chuong trinh tinh toan don gian</h3>
+<p>Vui long nhap vao 2 so de tinh toan</p>
+
+<input type="text" id="a">
+<input type="text" id="b">
+<br><br>
+<button onclick="cong()">Addition(+)</button>
+<button onclick="tru()">Subtraction(-)</button>
+<button onclick="nhan()">Multiplication(X)</button>
+<button onclick="chia()">Division(/)</button>
+<br><br>
+
+Ket qua:
+<p id="result"></p>
+
+<script>
+    let a = document.getElementById("a");
+    let b = document.getElementById("b");
+
+    function cong() {
+        let x1 = parseInt(a.value) + parseInt(b.value);
+        document.getElementById("result").innerHTML = "Phep cong: " + x1;
+    }
+    function tru() {
+        let x2 = parseInt(a.value) - parseInt(b.value);
+        document.getElementById("result").innerHTML = "Phep tru: " + x2;
+    }
+    function nhan() {
+        let x3 = (parseInt(a.value)) * (parseInt(b.value));
+        document.getElementById("result").innerHTML = "Phep nhan: " + x3;
+    }
+    function chia() {
+        let x4 = (parseInt(a.value)) / (parseInt(b.value));
+        document.getElementById("result").innerHTML = "Phep chia: " + x4;
+    }
+</script>
+
+</body>
+</html>

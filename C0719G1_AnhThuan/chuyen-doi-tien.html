@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Doi tien</title>
+</head>
+<body>
+
+Amount:
+<input type="text" id="a"><br><br>
+
+From Currency:
+<select id="from">
+    <option value="23000">VND</option>
+    <option value="1">USD</option>
+    <option value="0.85">EUR</option>
+</select>
+<br>
+
+To Currency:
+<select id="to">
+    <option value="23000">VND</option>
+    <option value="1">USD</option>
+    <option value="0.85">EUR</option>
+</select>
+<br><br>
+
+<button onclick="convert()">Convert!</button>
+<br><br>
+
+Result:
+<p id="result"></p>
+
+<script>
+    function convert() {
+        let a = parseInt(document.getElementById("a").value);
+
+        let b = document.getElementById("from").value;
+        let c = document.getElementById("to").value;
+
+        if (b == c) {
+            document.getElementById("result").innerHTML = "Vui long chon loai dong tien muon doi!";
+        } else {
+            let x = a * c / b;
+            let d = document.getElementById("to");
+            document.getElementById("result").innerHTML = x + " " + d.options[d.options.selectedIndex].innerHTML;
+        }
+    }
+</script>
+
+</body>
+</html>
