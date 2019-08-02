@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ung dung chuyen doi tien te</title>
+</head>
+<script>
+    function ungdungchuyendoitiente() {
+        let amount = document.getElementById("amount");
+        let from = document.getElementById("from");
+        let to = document.getElementById("to");
+        let showResult = (Number(amount.value)) / (Number(from.value)) * (Number(to.value));
+        document.getElementById("result").innerHTML = "Result : " + showResult + to.options[to.options.selectedIndex].innerHTML
+    }
+</script>
+<script src="ungdungchuyendoitiente.js"></script>
+<body>
+Amount:
+<br>
+<input type="text" id="amount">
+<br>
+From Currency:
+<select id="from">
+    <option value="23000">VND</option>
+    <option value="1">USD</option>
+</select>
+<br>
+To Currency:
+<select id="to">
+    <option value="1">USD</option>
+    <option value="23000">VND</option>
+</select>
+<br>
+<button onclick="ungdungchuyendoitiente()">Convert</button>
+    <br>
+<p id="result">Result : </p>
+</body>
+</html>
