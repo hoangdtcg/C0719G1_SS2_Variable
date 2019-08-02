@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <label>Amount</label><br>
+    <input name="amount" type="number" id="amt"><br>
+
+    <label>From Currency</label><br>
+    <select id="fromcurrency">
+        <option value="23113">Vietnam(VND)</option>
+        <option value ="1">US($)</option>
+        <option value ="108">Japan(¥)</option>
+    </select><br>
+
+    <label>To Currency</label><br>
+    <select id="tocurrency">
+        <option name="US" value="23113">Vietnam(VND)</option>
+        <option value="1">US($)</option>
+        <option value="108">Japan(¥)</option>
+    </select>
+</form>
+<button type="button" onclick="exchangemoney();">Convert</button>
+<p id="result"></p>
+<script>
+    function exchangemoney() {
+        let a=document.getElementById("amt");
+        let b=document.getElementById("fromcurrency");
+        let c=document.getElementById("tocurrency");
+        let kq=Number(a.value)*Number(c.value)/Number(b.value);
+        document.getElementById("result").innerHTML="Kết quả là: " +kq.toFixed(4)+ c.options[c.options.selectedIndex].innerHTML;
+    }
+</script>
+</body>
+</html>
