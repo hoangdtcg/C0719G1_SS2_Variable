@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Doi nhiet do</title>
+</head>
+<body>
+
+<h3>Day la chuong trinh doi tu do C sang do F</h3>
+<p>Vui long nhap vao do C</p>
+<input type="text" id="doC"> do C
+<br><br>
+<button onclick="convert()">Chuyen doi!</button>
+<br><br>
+Nhiet do sang do F:
+<p id="doF"></p>
+
+<script>
+    function convert() {
+        let a = parseInt(document.getElementById("doC").value);
+        let b = 1.8 * a + 32;
+        document.getElementById("doF").innerHTML = b + " do F";
+    }
+</script>
+
+</body>
+</html>

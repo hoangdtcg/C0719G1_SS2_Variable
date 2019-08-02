@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hinh tron</title>
+</head>
+<body>
+
+<h3>Day la chuong trinh tinh chu vi va dien tich hinh tron</h3>
+<p>Vui long nhap vao ban kinh hinh tron</p>
+
+Ban kinh:
+<input type="text" id="r">
+<br><br>
+<button onclick="hinhTron()">Tinh chu vi va dien tich</button>
+
+<p id="p"></p>
+<p id="s"></p>
+
+<script>
+    function hinhTron() {
+        let r = parseInt(document.getElementById("r").value);
+
+        let p = 2 * 3.14 * r;
+        let s = 3.14 * r * r;
+
+        document.getElementById("p").innerHTML = "Chu vi hinh tron la: " + p;
+        document.getElementById("s").innerHTML = "Dien tich hinh tron la: " +s;
+    }
+</script>
+
+</body>
+</html>

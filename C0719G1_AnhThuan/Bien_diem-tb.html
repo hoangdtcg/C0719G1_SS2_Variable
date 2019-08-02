@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tinh diem sinh vien</title>
+</head>
+<body>
+
+<h3>Diem trung binh cua sinh vien</h3>
+<p>Vui long nhap diem cac mon</p>
+
+Vat ly:
+<input type="text" id ="a">
+<br>
+Hoa hoc:
+<input type="text" id ="b">
+<br>
+Sinh hoc:
+<input type="text" id ="c">
+<br><br>
+
+<button onclick="tinhTong()">Nhap xong!</button>
+<br><br>
+
+Tong diem:
+<p id="tong"></p>
+Diem trung binh:
+<p id="tb"></p>
+
+<script>
+    function tinhTong() {
+        let a = parseInt(document.getElementById("a").value);
+        let b = parseInt(document.getElementById("b").value);
+        let c = parseInt(document.getElementById("c").value);
+
+        let tong = a + b + c;
+        let tb = (a + b + c)/3;
+        document.getElementById("tong").innerHTML = tong;
+        document.getElementById("tb").innerHTML = tb;
+    }
+</script>
+
+</body>
+</html>
