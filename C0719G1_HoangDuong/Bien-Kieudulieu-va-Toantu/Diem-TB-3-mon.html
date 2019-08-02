@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diem trung binh</title>
+</head>
+<body>
+<script >
+    let diemvatly
+    let diemhoahoc
+    let diemsinhhoc
+
+    diemhoahoc = prompt('Nhap diem Hoa hoc')
+    diemvatly = prompt('Nhap diem vat ly ')
+    diemsinhhoc = prompt('Nhap diem sinh hoc')
+
+    let hoa = parseInt(diemhoahoc)
+    let sinh = parseInt(diemsinhhoc)
+    let ly = parseInt(diemvatly)
+
+    let TB = (hoa + ly + sinh)/3
+    document.write('Diem Trung Binh 3 Mon : ' + TB)
+</script>
+</body>
+</html>

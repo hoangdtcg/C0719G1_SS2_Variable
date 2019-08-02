@@ -1,0 +1,91 @@
+html, body {
+    height: 100%;
+    background-color: black;
+}
+
+*{
+    font-family: 'Pacifico', cursive;
+}
+
+h1{
+    color: aliceblue;
+    height: 40px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 40px;
+}
+
+#title {
+    color: aliceblue;
+    height: 20PX;
+    display:flex;
+    flex-flow:column;
+    margin-bottom: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+#root {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+#calcu{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+#calcu2{
+    width: 70%;
+}
+
+input{
+    height: 100px;
+    width: 50%;
+    font-size: 40px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+}
+
+button{
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+}
+
+#result{
+    color : aliceblue;
+    height: 10px;
+}
+
+#cal{
+    color: aliceblue;
+    font-weight:bold;
+    margin-top: 40px;
+    text-align:center;
+}
+
+#cal > button{
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+}
+
+#numb{
+    text-align: center;
+}
+
+p{
+    width: 30%;
+    padding: auto;
+    font-size: 30px;
+}
