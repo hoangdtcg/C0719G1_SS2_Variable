@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyen doi tien te</title>
+</head>
+<style>
+    .button {
+        background-color: #881eaf; /* Green */
+        border: none;
+        color: white;
+        padding: 4px 8px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        -webkit-transition-duration: 0.4s; /* Safari */
+        transition-duration: 0.4s;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+
+    .button:hover {
+        background-color: #881eaf;
+        color: white;
+    }
+
+    .button {
+        background-color: white;
+        color: black;
+        border: 2px solid #bab8ba;
+    }
+</style>
+<body>
+<form>
+    Amount:
+    <input type="text" id='amount'>
+    From Currency
+    <select id="from">
+        <option value="23000">VietNam</option>
+        <option value="1">USD</option>
+    </select>
+    To Currency
+    <select id="to">
+        <option value="1">USD</option>
+        <option value="23000">VietNam</option>
+    </select>
+    <button class="button" type="button" onclick="convert()">Convert</button>
+    <p id="result"></p>
+</form>
+<script>function convert() {
+    let amount = parseFloat(document.getElementById('amount').value);
+    let from = parseFloat(document.getElementById('from').value);
+    let to = parseFloat(document.getElementById('to').value);
+    let result = (amount * to) / from
+    document.getElementById("result").innerHTML = "Result: " + result
+}</script>
+</body>
+</html>
