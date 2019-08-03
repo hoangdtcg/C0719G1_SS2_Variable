@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính Diện tích Hình Tròn</title>
+    <script >
+        function circleArea(){
+            let banKinh= document.getElementById("banKinh").value;
+            let area;
+            if(banKinh.trim()!="") {
+                area=banKinh * banKinh * 3.14;
+            }else{
+                area="";
+            }
+            document.getElementById("result").value=area;
+
+        }
+    </script>
+</head>
+<body>
+<table>
+    <caption>Tính Diện Tích Hình Tròn</caption>
+    <tr>
+        <td>Nhập Bán Kính:</td>
+        <td> <input id="banKinh" type="number" value="" size="20"/> </td>
+        <td> <input type="button" onclick="circleArea()" value="Tính Toán"/> </td>
+    </tr>
+    <tr>
+        <td>Kết Quả: </td>
+        <td><input type="text" readonly id="result"/> </td>
+    </tr>
+
+</table>
+
+</body>
+</html>
