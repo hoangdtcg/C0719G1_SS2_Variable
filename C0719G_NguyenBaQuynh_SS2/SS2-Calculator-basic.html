@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator basic</title>
+    <script>
+        function operate(op){
+            let number1=parseFloat(document.getElementById("number1").value);
+            let number2=parseFloat(document.getElementById("number2").value);
+            let result= document.getElementById("ketqua");
+
+            if(!isNaN(number1) && !isNaN(number2) ){
+                switch (op) {
+                    case "add": result.innerHTML=  (number1+number2) + ""; break;
+                    case "sub": result.innerHTML=  (number1-number2)  + ""; break;
+                    case "mul": result.innerHTML=  (number1*number2)  + "";  break;
+                    case "div": result.innerHTML=   (number1/number2)  + ""; break;
+                }
+            }else{
+                result.innerHTML="Giá trị nhập vào phải là kiểu số !";
+            }
+        }
+    </script>
+</head>
+<body>
+<table>
+    <caption style="text-emphasis: blue">Calculator</caption>
+    <tr>
+        <td colspan="2"><input type="number" id="number1"/> </td>
+        <td colspan="2"><input type="number" id="number2"/> </td>
+    </tr>
+    <tr>
+        <td><button type="button"  onclick="operate('add')">Addition (+)</button> </td>
+        <td><button type="button" onclick="operate('sub')">Subtraction (-)</button> </td>
+        <td><button type="button" onclick="operate('mul')">Multiplication (x)</button> </td>
+        <td><button type="button" onclick="operate('div')">Division (/)</button> </td>
+    </tr>
+    <tr>
+        <td colspan="4"><strong>Result:</strong> <span style="color: blue" id="ketqua"></span></td>
+    </tr>
+
+</table>
+
+</body>
+</html>

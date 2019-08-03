@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng Dụng Chuyển Đổi Tiền Tệ</title>
+    <script>
+        function convertCurrency(){
+            let amountFrom= document.getElementById("amount").value;
+            let amountTo;
+            let from= document.getElementById("from").value;
+            let to= document.getElementById("to").value;
+            let arr1=from.split("-");
+            let arr2=to.split("-");
+            let tyGiaFrom=parseFloat(arr1[0]);
+            let tyGiaTo=parseFloat(arr2[0]);
+            amountTo= (amountFrom*tyGiaTo)/tyGiaFrom;
+            document.getElementById("result").innerText=amountTo + "  " +  arr2[1];
+
+
+        }
+    </script>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Amount</th> <th>From Currency</th><th>To Currency</th> <th></th>
+    </tr>
+    <tr>
+        <td><input type="number" size="30" id="amount" /></td>
+        <td>
+            <select id="from">
+                <option value="23000-VND" selected>Việt Nam</option>
+                <option value="1-USD">Mỹ</option>
+                <option value="0.9-EUR">Euro</option>
+                <option value="7-CNY">Trung Quốc</option>
+                <option value="1183-KRW">Hàn Quốc</option>
+                <option value="109-JPY">Nhật Bản</option>
+            </select>
+        </td>
+        <td>
+            <select id="to">
+                <option value="1-USD" selected >Mỹ</option>
+                <option value="23000-VND">Việt Nam</option>
+                <option value="0.9-EUR">Euro</option>
+                <option value="7-CNY">Trung Quốc</option>
+                <option value="1183-KRW">Hàn Quốc</option>
+                <option value="109-JPY">Nhật Bản</option>
+            </select>
+        </td>
+        <td>
+            <button type="button" onclick="convertCurrency()">CONVERT</button>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="4">Result: <div id="result" style="display: inline; color: blue;" ></div></td>
+    </tr>
+</table>
+</body>
+</html>

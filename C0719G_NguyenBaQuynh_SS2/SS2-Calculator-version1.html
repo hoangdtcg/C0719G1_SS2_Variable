@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng Dụng Máy Tính Bỏ Túi</title>
+    <style>
+        table {margin: auto; background-color: #808080}
+        .btn {width: 30px}
+    </style>
+    <script >
+        function operator(value){
+            let display= document.getElementById("display");
+            if(value=="="){
+                let result=eval(display.value);
+                if(result==undefined){
+                    display.value="";
+                }else{
+                    display.value=eval(display.value);
+                }
+            }else if(value=="del"){
+                let leng= display.value.length;
+                display.value=display.value.substring(0,leng-1);
+            }else if(value=="CE"){
+                display.value="";
+            }else if(value=="-/+"){
+                display.value=display.value + "-";
+            }
+            else{
+                display.value=display.value + value;
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td colspan="5"> <input id="display" readonly type="text" size="20"></td>
+        </tr>
+        <tr>
+            <td><button class="btn" type="button" onclick="operator(this.innerHTML)" >7</button> </td>
+            <td><button class="btn" type="button" onclick="operator(this.innerHTML)" >8</button></td>
+            <td><button class="btn" type="button" onclick="operator(this.innerHTML)" >9</button></td>
+            <td ><button class="btn" type="button" onclick="operator(this.innerHTML)" style="width: 30px;">del</button></td>
+            <td ><button class="btn" type="button" onclick="operator(this.innerHTML)" style="width: 30px;">CE</button></td>
+        </tr>
+        <tr>
+            <td><button class="btn" type="button" onclick="operator(this.innerHTML)" >4</button> </td>
+            <td><button class="btn" type="button" onclick="operator(this.innerHTML)" >5</button></td>
+            <td><button class="btn" type="button" onclick="operator(this.innerHTML)" >6</button></td>
+            <td><button class="btn" type="button" onclick="operator(this.innerHTML)" >*</button></td>
+            <td><button class="btn" type="button" onclick="operator(this.innerHTML)" >+</button></td>
+        </tr>
+        <tr>
+            <td><button class="btn" type="button" onclick="operator(this.innerHTML)" >1</button> </td>
+            <td><button class="btn" type="button" onclick="operator(this.innerHTML)" >2</button></td>
+            <td><button class="btn" type="button" onclick="operator(this.innerHTML)" >3</button></td>
+            <td><button class="btn" type="button" onclick="operator(this.innerHTML)" >/</button></td>
+            <td><button class="btn" type="button" onclick="operator(this.innerHTML)" >-</button></td>
+        </tr>
+        <tr>
+            <td ><button  class="btn" type="button" onclick="operator(this.innerHTML)" >0</button> </td>
+            <td ><button  class="btn" style="width: 30px" type="button" onclick="operator(this.innerHTML)" >.</button> </td>
+            <td><button class="btn" type="button" onclick="operator(this.innerHTML)" >-/+</button></td>
+            <td colspan="2"><button class="btn" type="button" onclick="operator(this.innerHTML)" style="width: 65px;">=</button></td>
+        </tr>
+
+    </table>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính điểm trung bình môn học</title>
+    <script>
+        function diemTrungBinh(){
+            let ly= parseFloat(document.getElementById("ly").value);
+            let hoa= parseFloat(document.getElementById("hoa").value);
+            let sinh= parseFloat(document.getElementById("sinh").value);
+            let diemTB= (ly+hoa+sinh)/3;
+            document.getElementById("ketqua").value=diemTB;
+        }
+    </script>
+</head>
+<body>
+<table>
+    <caption>Tính Điểm Trung Bình Môn</caption>
+    <tr>
+        <td><label for="ly"> Vật Lý : </label></td>
+        <td><input id="ly" type="number" size="30" value=""/></td>
+    </tr>
+    <tr>
+        <td><label for="hoa"> Hóa Học : </label></td>
+        <td><input id="hoa" type="number" size="30" value=""/></td>
+    </tr>
+    <tr>
+        <td><label for="sinh"> Sinh Học : </label></td>
+        <td><input id="sinh" type="number" size="30" value=""/></td>
+    </tr>
+    <tr>
+        <td><label for="ketqua"> KẾT QUẢ : </label></td>
+        <td><input readonly id="ketqua" type="number" size="30" value=""/></td>
+    </tr>
+    <tr>
+        <td colspan="2" style="text-align: left"><button onclick="diemTrungBinh()">Tính Điểm Trung Bình</button> </td>
+    </tr>
+
+</table>
+
+</body>
+</html>
