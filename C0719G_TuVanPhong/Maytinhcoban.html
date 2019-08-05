@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Maytinhcoban</title>
+</head>
+<body>
+<style>
+    button {
+        width: 100%;
+    }
+</style>
+<table>
+    <tr>
+        <td colspan="4"><input id = "output"></td>
+        <td>
+            <button value="" onclick="clearPart()"><</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+             <button value="7" onclick="setOutput(this.value)">7</button>
+        </td>
+        <td>
+              <button value="8" onclick="setOutput(this.value)">8</button>
+        </td>
+        <td>
+        <button value="9" onclick="setOutput(this.value)">9</button>
+        </td>
+        <td>
+        <button value="+" onclick="setOutput(this.value)">+</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button value="4" onclick="setOutput(this.value)">4</button>
+        </td>
+        <td>
+             <button value="5" onclick="setOutput(this.value)">5</button>
+         </td>
+         <td>
+              <button value="6" onclick="setOutput(this.value)">6</button>
+         </td>
+        <td>
+              <button value="*" onclick="setOutput(this.value)">*</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button value="1" onclick="setOutput(this.value)">1</button>
+        </td>
+        <td>
+            <button value="2" onclick="setOutput(this.value)">2</button>
+        </td>
+        <td>
+            <button value="3" onclick="setOutput(this.value)">3</button>
+        </td>
+        <td>
+            <button value="/" onclick="setOutput(this.value)">/</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button value="." onclick="setOutput(this.value)">.</button>
+        </td>
+        <td>
+            <button value="0" onclick="setOutput(this.value)">0</button>
+        </td>
+        <td>
+            <button onclick="clearOutput()">AC</button>
+        </td>
+        <td>
+            <button value="" onclick="result()">=</button>
+        </td>
+    </tr>
+
+</table>
+</body>
+<script>
+    function setOutput(value) {
+        document.getElementById("output").value+= value;
+    }
+    function result() {
+        let output = document.getElementById("output").value;
+        document.getElementById("output").value= eval(output);
+    }
+    function clearOutput() {
+        document.getElementById("output").value = '';
+    }
+    function clearPart() {
+        let des = document.getElementById("output").value;
+        let count = des.length;
+        let part = des.substr( 0,count-1);
+        document.getElementById("output").value = part;
+    }
+</script>
+</html>
