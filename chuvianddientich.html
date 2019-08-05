@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuvivadientichhinhtron</title>
+</head>
+<body>
+Nhap Ban Kinh:
+<input type="number" id="radius">
+<button type="button" onclick="tinhchuvi()">ChuVi</button>
+<button type="button" onclick="tinhdientich()">DienTich</button>
+<p id="kq"></p>
+<script>
+    let bankinh = document.getElementById('radius');
+    function tinhchuvi() {
+        let chuvi = 2*parseFloat(bankinh.value)*Math.PI;
+        document.getElementById('kq').innerHTML ="C= " +chuvi;
+    }
+    function tinhdientich() {
+        let dientich = (bankinh.value)*(bankinh.value)*Math.PI;
+        document.getElementById('kq').innerHTML = "S= " +dientich;
+
+    }
+</script>
+</body>
+</html>
