@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<form>
+
+    <div class="input">
+        <input type="number" id="num1">
+        <input type="number" id="num2"><br/><br/>
+    </div>
+
+    <button type="button" onclick="addtion();">Addtion(+)</button>
+    <button type="button" onclick="subtraction();">Subtraction(-)</button>
+    <button type="button" onclick="multiplication();">Multiplication(X)</button>
+    <button type="button" onclick="division()">Division(/)</button>
+    <p id="result"></p>
+
+</form>
+<script>
+    let a=document.getElementById('num1');
+    let b=document.getElementById('num2');
+    function addtion() {
+        let add=parseInt(a.value)+parseInt(b.value);
+        document.getElementById("result").innerHTML= "Kết quả cộng là: "+add;
+    }
+    function subtraction() {
+        let sub=parseInt(a.value)-parseInt(b.value);
+        document.getElementById("result").innerHTML="Kết quả trừ là: "+sub;
+    }
+    function multiplication() {
+        let sub=parseInt(a.value)*parseInt(b.value);
+        document.getElementById("result").innerHTML="Kết quả nhân là: "+sub;
+    }
+    function division() {
+        if (parseInt(b.value) !== 0) {
+            let div = parseInt(a.value) / parseInt(b.value);
+            document.getElementById("result").innerHTML = "Kết quả chia là: " + div;
+        }
+        else {
+            document.getElementById("result").innerHTML = "Error:Bạn phải nhập số bị chia khác 0 ";
+        }
+    }
+</script>
+</body>
+
+</html>
