@@ -7,7 +7,7 @@ function dangnhap()
         if(mk=='admin'){
             document.getElementById('tk').innerHTML= 'chao mung ban dang nhap thanh cong';
         }
-        else if (mk==null){
+        else if (mk==""){
             document.getElementById('tk').innerHTML="moi ban nhap lai mat khau"
         }
         else {
@@ -15,7 +15,7 @@ function dangnhap()
         }
 
     }
-    else if (tk==null){
+    else if (tk==""){
         document.getElementById("tk").innerHTML="moi ban nhap lai tai khoan dang nhap"
 
     }
