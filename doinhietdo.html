@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>doinhietdo</title>
+</head>
+<body>
+<input type="number" id="doC">
+do C
+<button type="button" onclick="doinhietdo()">Convert</button>
+<p id ="doF"></p>
+<script>
+    function doinhietdo() {
+        let oC = document.getElementById("doC");
+        let oF = parseFloat(oC.value) * 9 / 5 + 32;
+        document.getElementById("doF").innerHTML = "= " + oF;
+    }
+</script>
+</body>
+</html>
