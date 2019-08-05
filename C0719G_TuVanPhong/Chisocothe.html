@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chỉ số cơ thể</title>
+</head>
+<body>
+<form>
+    Weight :
+    <input id="weight" type="text">
+    </br>
+    Height :
+    <input id="height" type="text">
+    </br>
+    <button type="button" onclick="tinhChiso()">Result</button>
+</form>
+<p id="result"></p>
+</body>
+<script>
+    let w = parseFloat(document.getElementById("weight").value);
+    let h = parseFloat(document.getElementById("height").value);
+    let bim = w/(h*h);
+    function tinhChiso() {
+        if (bim < 18.5) {
+            document.getElementById("result").innerHTML= "UnderWight";
+        } else if (18.5<= bim < 25.0) {
+            document.getElementById("result").innerHTML= "Nomal";
+        } else if (25.0<= bim < 30.0) {
+            document.getElementById("result").innerHTML= "OverWeight";
+        } else
+            document.getElementById("result").innerHTML= "Obese";
+    }
+</script>
+</html>
