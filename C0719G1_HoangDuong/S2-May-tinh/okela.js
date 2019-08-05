@@ -1,25 +1,13 @@
-    let x =document.getElementById('numb1');
-    let y = document.getElementById('numb2');
-function addition() {
-    let add = parseInt(x.value) +parseInt(y.value);
-    document.getElementById("result").innerHTML =  parseInt(x.value) + " + " + parseInt(y.value) + " = " + add;
+function setOutput(value) {
+    document.getElementById("output").value += value;
 }
 
-function subtraction() {
-    let sub = parseInt(x.value) - parseInt(y.value);
-    document.getElementById("result").innerHTML = "Result Subtraction : " + sub;
+function result() {
+    let output = document.getElementById("output").value;
+    document.getElementById("output").value = eval(output);
 }
 
-function Multipilcaton() {
-    let mul = parseInt(x.value) * parseInt(y.value);
-    document.getElementById("result").innerHTML = "Result Multiplication : " + mul;
+function clearOutput() {
+    document.getElementById("output").value = '';
 }
 
-function Division() {
-    if(parseInt(y.value) == 0){
-        alert("Error. Second number must not be 0. Please try again !!")
-    } else {
-        let div = parseInt(x.value) / parseInt(y.value);
-        document.getElementById("result").innerHTML = "Result Division : " + div;
-    }
-}

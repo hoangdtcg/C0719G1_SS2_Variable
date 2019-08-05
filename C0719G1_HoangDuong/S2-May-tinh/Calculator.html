@@ -9,27 +9,88 @@
 <body>
 <div id="root">
     <div id="title">
-<form>
-    <h1>Calculator</h1>
-    <div id="calcu">
-        <div id="calcu2">
-    <div id="numb">
-    <input id="numb1" placeholder="First Number">
-    <input id="numb2" placeholder="Second Number"><br/>
+        <form>
+            <table>
+                <tr>
+                    <h1>Calculator</h1>
+                </tr>
+                <tr>
+                    <td colspan="4"><input id="output"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="button" value="/" onclick="setOutput(this.value)">/</button>
+                    </td>
+                    <td>
+                        <button type="button" value="^" onclick="setOutput(this.value)">^</button>
+                    </td>
+                    <td>
+                        <button type="button" value="(" onclick="setOutput(this.value)">(</button>
+                    </td>
+                    <td>
+                        <button type="button" value=")" onclick="setOutput(this.value)">)</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="button" value="7" onclick="setOutput(this.value)">7</button>
+                    </td>
+                    <td>
+                        <button type="button" value="8" onclick="setOutput(this.value)">8</button>
+                    </td>
+                    <td>
+                        <button type="button" value="9" onclick="setOutput(this.value)">9</button>
+                    </td>
+                    <td>
+                        <button type="button" value="+" onclick="setOutput(this.value)">+</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="button" value="4" onclick="setOutput(this.value)">4</button>
+                    </td>
+                    <td>
+                        <button type="button" value="5" onclick="setOutput(this.value)">5</button>
+                    </td>
+                    <td>
+                        <button type="button" value="6" onclick="setOutput(this.value)">6</button>
+                    </td>
+                    <td>
+                        <button type="button" value="-" onclick="setOutput(this.value)">-</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="button" value="1" onclick="setOutput(this.value)">1</button>
+                    </td>
+                    <td>
+                        <button type="button" value="2" onclick="setOutput(this.value)">2</button>
+                    </td>
+                    <td>
+                        <button type="button" value="3" onclick="setOutput(this.value)">3</button>
+                    </td>
+                    <td>
+                        <button type="button" value="*" onclick="setOutput(this.value)">x</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="button" value="0" onclick="setOutput(this.value)">0</button>
+                    </td>
+                    <td>
+                        <button type="button" value="." onclick="setOutput(this.value)">.</button>
+                    </td>
+                    <td>
+                        <button type="button" onclick="clearOutput()">C</button>
+                    </td>
+                    <td>
+                        <button type="button" onclick="result()">=</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
     </div>
-    <p></p>
-    <div id="cal">
-    <button type="button" id="add" onclick="addition()">+</button>
-    <button type="button" id="sub" onclick="subtraction()">-</button>
-    <button type="button" id="multi" onclick="Multipilcaton()">x</button>
-    <button type="button" id="div" onclick="Division()">/</button>
-    </div>
-        </div>
-    <p id="result"></p>
-    </div>
-</form>
 </div>
-</div>
-    <script src="okela.js"></script>
+<script src="okela.js"></script>
 </body>
 </html>

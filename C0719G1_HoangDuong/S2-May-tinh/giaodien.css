@@ -3,11 +3,11 @@ html, body {
     background-color: black;
 }
 
-*{
+* {
     font-family: 'Pacifico', cursive;
 }
 
-h1{
+h1 {
     color: aliceblue;
     height: 40px;
     margin-bottom: 50px;
@@ -18,8 +18,8 @@ h1{
 #title {
     color: aliceblue;
     height: 20PX;
-    display:flex;
-    flex-flow:column;
+    display: flex;
+    flex-flow: column;
     margin-bottom: 10px;
     justify-content: center;
     align-items: center;
@@ -36,16 +36,16 @@ h1{
     background-size: 100% 100%;
 }
 
-#calcu{
+#calcu {
     display: flex;
     flex-wrap: nowrap;
 }
 
-#calcu2{
+#calcu2 {
     width: 70%;
 }
 
-input{
+input {
     height: 100px;
     width: 50%;
     font-size: 40px;
@@ -54,25 +54,32 @@ input{
     border-radius: 10px;
 }
 
-button{
+button {
     box-sizing: border-box;
     border: 2px solid #ccc;
     border-radius: 10px;
+    width: 100%;
+    height: 100%;
 }
 
-#result{
-    color : aliceblue;
+input {
+    width: 100%;
+    height: 50%;
+}
+
+#result {
+    color: aliceblue;
     height: 10px;
 }
 
-#cal{
+#cal {
     color: aliceblue;
-    font-weight:bold;
+    font-weight: bold;
     margin-top: 40px;
-    text-align:center;
+    text-align: center;
 }
 
-#cal > button{
+#cal > button {
     width: 100px;
     margin: 10px;
     text-align: center;
@@ -80,11 +87,8 @@ button{
     font-size: 30px;
 }
 
-#numb{
-    text-align: center;
-}
 
-p{
+p {
     width: 30%;
     padding: auto;
     font-size: 30px;
