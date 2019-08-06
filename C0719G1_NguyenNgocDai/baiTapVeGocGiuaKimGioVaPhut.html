@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BAI TAP VE GOC GIUA KIM GIO VA KIM PHUT</title>
+</head>
+<body>
+<input type="text" id="gio" placeholder="Nhap gio">
+<input type="text" id="phut" placeholder="Nhap phut">
+<input type="button" id="convert" onclick="chuyenDoi()" value="Convert"><br>
+Thoi gian<text id="tg"></text><br>
+Do<text id="do"></text>
+<script>
+    function chuyenDoi() {
+        let h = parseInt(document.getElementById("gio").value);
+        let ph = parseInt(document.getElementById("phut").value);
+        if (h == ph && h==0 ||ph ==5*h ||h==12 &&ph==0) {
+            result = 0;
+        }
+        else if(ph == 6+h|| ph ==2.5*h){
+            result = 180;
+        }
+        else{
+            temp = Math.abs(6*ph - (30*h+ 0.5*ph));
+            if(temp >360){s
+                result = temp -360;
+            }
+            else {
+                temp==result;
+            }
+        }
+        document.getElementById("do").innerHTML = result;
+        document.getElementById("tg").innerHTML = h + "gio" + ph + "phut";
+    }
+
+</script>
+</body>
+</html>
