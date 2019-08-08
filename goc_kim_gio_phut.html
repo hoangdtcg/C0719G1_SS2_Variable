@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tinh goc giua kim gio phut </title>
+</head>
+<body>
+<input id ="hour" type="number">
+hours
+<input id ="min" type="number">
+minutes
+<button type="button" onclick="cornerHourMin()">Corner</button>
+<p id="cor"></p>
+<script>
+    function cornerHourMin() {
+        let minutes = Number(document.getElementById('min').value);
+        let hours = Number(document.getElementById('hour').value);
+        let cornerMin = (360 / 60) * minutes;
+        let cornerHour = (360 / 12) * hours + 360 / (60* 12) * minutes;
+
+        let corner = Math.abs(cornerHour - cornerMin);
+        if(corner < 180){
+            corner=corner;
+        }else{
+            corner = 360 -corner;
+        }
+
+        document.getElementById('cor').innerHTML = ('goc giua 2 kim :') + corner;
+    }
+</script>
+</body>
+</html>
