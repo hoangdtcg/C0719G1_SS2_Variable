@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tinh diem trung binh</title>
+</head>
+<body>diemToan
+    <input id ="diemToan" type="text"=>
+     diemLy
+    <input id ="diemLy" type="text">
+    diemHoa
+    <input id ="diemHoa" type="text">
+    <button onclick="tinhdiemTB()">Tinhdiem</button>
+    <p id="tongdiem"></p>
+    <p id="diemTB"></p>
+
+<script>
+    function tinhdiemTB() {
+        let diemToan = parseFloat(document.getElementById("diemToan").value);
+        let diemLy = parseFloat(document.getElementById("diemLy").value);
+        let diemHoa = parseFloat(document.getElementById("diemHoa").value);
+        if (diemToan< 0 || diemToan > 10 || diemLy < 0 || diemLy > 10 || diemHoa < 0 || diemHoa > 10) {
+            document.write("Nhap Sai Moi nhap lai: ");
+        } else {
+
+            let tongdiem = diemToan + diemLy + diemHoa;
+            let diemTB = tongdiem / 3;
+            document.getElementById("tongdiem").innerHTML = "Tong diem 3 mon: " + tongdiem;
+            document.getElementById("diemTB").innerHTML = "Diem trung binh 3 mon: " + diemTB;
+        }
+    }
+</script>
+
+</body>
+</html>

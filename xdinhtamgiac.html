@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xac dinh tam giac</title>
+</head>
+<body>
+<input type="number" id="canha">
+<input type="number" id="canhb">
+<input type="number" id="canhc">
+<button type="button" onclick="xdinhtamgiac()">XacDinh</button>
+<p id = "kq"</p>
+<script>
+    function xdinhtamgiac() {
+        let canh1 = parseFloat(document.getElementById('canha').value);
+        let canh2 = parseFloat(document.getElementById('canhb').value);
+        let canh3 = parseFloat(document.getElementById('canhc').value);
+        let kqr   = document.getElementById("kq");
+        if ((canh3 + canh1) < canh2 || (canh2 + canh3) < canh1 || (canh1 + canh2) < canh3) {
+            kqr.innerHTML =("khong phai tam giac");
+        } else {
+            if (canh1 == canh2 && canh1 == canh3) {
+                kqr.innerHTML = ("tam giac deu");
+            } else if (canh1 == canh2 || canh2 == canh3 || canh3 == canh1) {
+                kqr.innerHTML = ("tam giac can");
+            } else if (canh1 * canh1 == (canh2 * canh2 + canh3 * canh3) || canh2 * canh2 == (canh1 * canh1 + canh3 * canh3) || canh3 * canh3 == (canh2 * canh2 + canh1 * canh1)) {
+                kqr.innerHTML = ("tam giac vuong");
+            } else {
+                kqr.innerHTML = ("tam giac thuong");
+            }
+
+        }
+
+    }
+</script>
+</body>
+</html>

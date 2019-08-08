@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ConvertCurrency</title>
+</head>
+<body>
+number
+<input id = "number" type="number">
+<select id="from" type="number">
+    <option  value="23000">USD</option>
+    <option  value="1">VND</option>
+    <option  value="15679">AUD</option>
+    <option  value="17261">CAD</option>
+    <option  value="23303">CHF</option>
+    <option  value="3394">DKK</option>
+    <option  value="25595">EUR</option>
+</select>
+<select id="to" type="number">
+    <option  value="23000">USD</option>
+    <option  value="1">VND</option>
+    <option  value="15679">AUD</option>
+    <option  value="17261">CAD</option>
+    <option  value="23303">CHF</option>
+    <option  value="3394">DKK</option>
+    <option  value="25595">EUR</option>
+</select>
+<button type="button" onclick="convertCurrency()">Convert</button>
+<p id = "kq"</p>
+<script>
+    function convertCurrency() {
+        let num = document.getElementById('number').value;
+        let fro = document.getElementById('from').value;
+        let t   = document.getElementById('to').value;
+        let kqr  = num*fro/t;
+        document.getElementById("kq").innerHTML = " = " +kqr;
+    }
+</script>
+
+</body>
+</html>

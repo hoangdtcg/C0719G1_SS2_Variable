@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>caculator</title>
+</head>
+<body>
+    <input type="number" id="number1">
+    <input type="number" id="number2">
+    <button type="button" onclick="add()">ADD</button>
+    <button type="button" onclick="sub()">SUB</button>
+    <button type="button" onclick="mul()">MUL</button>
+    <button type="button" onclick="div()">DIV</button>
+<p id =kq></p>
+<script>
+    let num1 = document.getElementById('number1');
+    let num2 = document.getElementById('number2');
+    let kqr = document.getElementById('kq');
+    function add() {
+        let result = parseFloat(num1.value) + parseFloat(num2.value);
+        kqr.innerHTML = "= " +result;
+    }
+    function sub() {
+        let result = parseFloat(num1.value) - parseFloat(num2.value);
+        kqr.innerHTML = " = " +result;
+    }
+    function mul() {
+        let result = parseFloat(num1.value)*parseFloat(num2.value);
+        kqr.innerHTML =" = " +result;
+    }
+    function div() {
+        let result = parseFloat(num1.value)/parseFloat(num2.value);
+        kqr.innerHTML = " = " +result;
+    }
+</script>
+</body>
+</html>
