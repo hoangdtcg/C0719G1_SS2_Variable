@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ung Dung May Tinh</title>
+</head>
+<body>
+<form>
+caculator<br>
+    <input type="text" id="a">
+    <input type="text" id="b"><br>
+    <button type="button"onclick="pheptinhcong()">Addition(+)</button>
+    <button type="button" onclick="pheptinhtru()">Subtraction(-)</button>
+    <button type="button"onclick="pheptinhnhan()">Multiplication(X)</button>
+    <button type="button" onclick="pheptinhchia()">Division(/)</button>
+</form>
+<p id="ketqua"></p>
+<script>
+    let text1 = document.getElementById("a");
+    let text2 = document.getElementById("b");
+    function pheptinhcong() {
+        let rs =parseInt(text1.value) + parseInt(text2.value);
+        document.getElementById("ketqua").innerHTML= "result= " + rs;
+    }
+    function pheptinhtru() {
+        let rs =parseInt(text1.value) - parseInt(text2.value);
+        document.getElementById("ketqua").innerHTML= "result= " + rs;
+    }
+    function pheptinhnhan() {
+        let rs =parseInt(text1.value) * parseInt(text2.value);
+        document.getElementById("ketqua").innerHTML= "result= " + rs;
+    }
+    function pheptinhchia() {
+        let rs =parseInt(text1.value) / parseInt(text2.value);
+        document.getElementById("ketqua").innerHTML= "result= " + rs;
+    }
+
+</script>
+
+</body>
+</html>

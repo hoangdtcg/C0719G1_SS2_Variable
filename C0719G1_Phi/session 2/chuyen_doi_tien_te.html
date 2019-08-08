@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển Đổi Tiền Tệ</title>
+</head>
+<body>
+<form>
+   Amount
+    <input type="text" id="amount">
+    From Currency
+    <select id="from">
+        <option value='23000'>VND</option>
+        <option value='1'>USD</option>
+        <option value='0.7666'>EURO</option>
+    </select>
+    To Currency
+    <select id="to">
+        <option value='23000'>VND</option>
+        <option value='1'>USD</option>
+        <option value='0.7666'>EURO</option>
+    </select>
+    <button type="button" onclick="showKq()">Convert</button>
+</form>
+<p id="ketqua"></p>
+<script>
+function showKq() {
+    let text1= document.getElementById("amount");
+    let from= document.getElementById("from");
+    let to= document.getElementById("to");
+    let rs= (Number(text1.value) * Number(to.value) )/ Number(from.value);
+    document.getElementById("ketqua").innerHTML= "Result : "+rs +to.options[to.options.selectedIndex].innerHTML;
+}
+</script>
+</body>
+</html>
