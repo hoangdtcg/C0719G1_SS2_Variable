@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi tiền tệ</title>
+<style >
+    table, th, td { border: 1px solid black;}
+</style>
+    <script >
+        function chuyendoi() {
+            let soTien = document.getElementById( "soTien").value;
+            let tien = parseInt(soTien);
+            let tu = parseFloat(document.getElementById("tu").value);
+            let sang = parseFloat(document.getElementById("sang").value);
+            let kq = (tien*tu)/sang;
+            document.getElementById("ketqua").innerHTML="kết quả :" + kq ;
+        }
+    </script>
+</head>
+<body>
+
+<table style="width:100%">
+    <tr>
+        <th>Amount:
+            <input type="text" id = "soTien" value=""></th>
+        <th>From Currency
+            <select id="tu">
+                <option value="23000">USD</option>
+                <option value="214">YEN</option>
+                <option value="3400">NDT</option>
+                <option value="25600">EUR</option>
+                <option value="1">VND</option>
+            </select></th>
+        <th>To Currency
+            <select id="sang">
+                <option value="23000">USD</option>
+                <option value="214">YEN</option>
+                <option value="3400">NDT</option>
+                <option value="25600">EUR</option>
+                <option value="1">VND</option>
+        </th>
+        </select>
+        <th><button type="button" onclick="chuyendoi()"<h1 style="background-color:rgb(60, 179, 113);"></h1>chuyển đổi</button></th>
+    </tr>
+    <tr>
+        <th>
+            <p id = "ketqua"></p>
+        </th>
+    </tr>
+</body>
+</html>

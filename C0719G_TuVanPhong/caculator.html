@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cacultor</title>
+
+</head>
+<body>
+
+<form>
+    <input type="text" id = "so1" value="0">
+    <input type="text" id = "so2" value="0">
+</form>
+<form>
+    <button type = "button" onclick ="tinhcong()">Addition(+)</button>
+    <button type="button" onclick="tinhtru()">Subtraction(-)</button>
+    <button type="button" onclick="tinhnhan()">Multiplication(*)</button>
+    <button type="button" onclick="tinhchia()">Division(/)</button>
+</form>
+<script>
+    function tinhcong() {
+        let so1 = parseFloat(document.getElementById("so1").value);
+        let so2 = parseFloat(document.getElementById("so2").value);
+        let kq = so1 + so2;
+        document.getElementById("ketqua").innerHTML = "Result: " + kq;
+    }
+    function tinhtru() {
+        let so1 = parseFloat(document.getElementById("so1").value);
+        let so2 = parseFloat(document.getElementById("so2").value);
+        let kq = so1 - so2;
+        document.getElementById("ketqua").innerHTML = "Result: " + kq;}
+    function tinhnhan() {
+        let so1 = parseFloat(document.getElementById("so1").value);
+        let so2 = parseFloat(document.getElementById("so2").value);
+        let kq = so1 * so2;
+        document.getElementById("ketqua").innerHTML = "Result: " + kq;}
+    function tinhchia() {
+        let so1 = parseFloat(document.getElementById("so1").value);
+        let so2 = parseFloat(document.getElementById("so2").value);
+        let kq = so1 / so2;
+        document.getElementById("ketqua").innerHTML = "Result: " + kq;}
+</script>
+<p id = "ketqua"></p>
+</body>
+</html>
