@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MoneyExchange</title>
+</head>
+<body>
+<script src="exchange.js"></script>
+
+Amount <br>
+<input type="text" id="numb"><br>
+From currency <br>
+<select id="s1">
+    <option name="Y" value="108.61">Yen</option>
+    <option name="$" value="1">American Dollar</option>
+    <option value="1182.52">Won</option>
+    <option value="6.88298">NDT</option>
+    <option value="22000">VND</option>
+</select> <br>
+To Currency <br>
+<select id="s2">
+    <option value="108.61">Yen</option>
+    <option value="1">American Dollar</option>
+    <option value="1182.52">Won</option>
+    <option value="6.88298">NDT</option>
+    <option value="22000">VND</option>
+</select> <br>
+
+<button onclick="alert('WTF')">Click me pls !!!</button>
+<button onclick="exchangemoney()">Convert</button>
+<p id="result"></p>
+</body>
+</html>
